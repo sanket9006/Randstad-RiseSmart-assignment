@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Add these CSS rules to your App.css file */
+
+.split-container {
+  display: flex;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.card-container {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
-  padding: 2em;
+  width: 200px;
+  height: 300px;
+  background-color: #ffdddd;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  background-color: #ffcccc;
+}
+
+.card.active {
+  background-color: #ccffcc !important;
+}
+
+.card.seen {
+  background-color: #f0f0f0;
+}
+
+.card-label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.album-count {
+  font-size: 18px;
+  color: #666666;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #666666;
+  border-radius: 5px;
+}
+
+.item-list {
+  flex: 0 0 25%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.item-list h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-list li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.item-list li.seen {
+  color: #888888;
+  text-decoration: line-through;
 }
