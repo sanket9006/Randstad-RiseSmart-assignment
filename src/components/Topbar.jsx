@@ -15,7 +15,7 @@ export default function ButtonAppBar({ text, setText }) {
                         placeholder="Enter user id..."
                         value={text}
                         onChange={(e) => { setText(e.target.value) }}
-                        style={{ backgroundColor: 'white', padding: '4px', borderRadius: '5px', border: 'none' }}
+                        style={{ backgroundColor: 'white', padding: '14px', borderRadius: '5px', border: 'none' }}
                     />
                 </div>
             </div>
